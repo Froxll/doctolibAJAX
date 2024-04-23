@@ -1,6 +1,8 @@
 <?php
 
-    
+  session_start();
+  include '../functions.php';
+
 
 ?>
 
@@ -35,7 +37,9 @@
                         <a class="nav-link active" aria-current="page" href="#" onclick="afficherDiv('rdv')">Mes RDV</a>
                       </li>
                       <li class="nav-item">
+
                         <a class="nav-link" href="#" onclick="afficherDiv('connexion')">Connexion</a>
+
                       </li>
                     </ul>
                   </div>

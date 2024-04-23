@@ -1,4 +1,5 @@
 <?php
+
   // Database constants.
   define('DB_USER', 'postgres');
   define('DB_PASSWORD', 'password');

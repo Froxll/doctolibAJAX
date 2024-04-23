@@ -1,0 +1,16 @@
+#formulaire{
+    border: solid 1px black;
+    padding : 5% 5% 2% 5%;
+    margin: 5% 10%;
+    border-radius: 20px;
+}
+
+#inscription{
+    padding-top: 10px;
+    margin-left: 38%;
+    color: red;
+}
+
+#inscription a{
+    text-decoration: none;
+}
