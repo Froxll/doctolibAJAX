@@ -38,6 +38,39 @@
     color: red;
 }
 
-#searchBar{
-    margin: 20px;
+.invisible{
+    display: none;
 }
+
+main div a{
+    border: solid white 1px;
+    text-decoration: none;
+    color: white;
+    background-color: #003248;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+main #connexion{
+    margin-top: 10%;
+}
+
+main #inscription{
+    margin-top: 10%;
+    margin-left: 38%;
+}
+
+main a#deconnexion{
+    background-color:  red;
+} 
+
+#medecins{
+    display: flex;
+}
+
+.medecin{
+    margin: 10px;
+}
+

@@ -1,5 +1,4 @@
-<?php
-                    
+<?php      
         function inscriptionpatient(){
             $conn = dbConnect();
 
