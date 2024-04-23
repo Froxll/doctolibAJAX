@@ -29,7 +29,7 @@
                     $_SESSION['mail'] = $mail;
 
                     // Rediriger vers la page d'accueil
-                    header('Location: ../../Accueil/accueil.php');
+                    header('Location: ../../index/index.php');
                   } else {
                     echo "Votre mot de passe est incorrect";
                   }
@@ -61,7 +61,7 @@
                       $_SESSION['mail_p'] = $mail;
 
                       // Rediriger vers la page d'accueil
-                      header('Location: ../../Accueil/accueil.php');
+                      header('Location: ../../index/index.php');
                     } else {
                       echo "Votre mot de passe est incorrect";
                     }
