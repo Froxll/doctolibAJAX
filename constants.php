@@ -1,9 +1,7 @@
 <?php
-
-  // Database constants.
-  define('DB_USER', 'postgres');
-  define('DB_PASSWORD', 'password');
-  define('DB_NAME', 'doctolib');
-  define('DB_SERVER', 'localhost');
-  define('DB_PORT', '5432');
+    const DB_USER = "postgres";
+    const DB_PASSWORD = "password";
+    const DB_NAME = "doctolib";
+    const DB_SERVER = "127.0.0.1";
+    const DB_PORT = 5432;
 ?>
