@@ -18,7 +18,7 @@
 
 
   
-  function dbRequestDoctor($db, $nom = '')
+  function dbRequestDoctor($db, $nom = '', $specialite = '')
   {
     try {
       $request = 'SELECT * FROM practicien';

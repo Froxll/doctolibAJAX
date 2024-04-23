@@ -13,7 +13,7 @@
     if($requestRessource === 'medecin'){
 
         if($_SERVER['REQUEST_METHOD'] === 'GET'){
-            if(isset($_GET['nom'])){
+            if(isset($_GET['nom']) ){
 
                 $nom = ucfirst(strtolower($_GET['nom'])); 
                 $doctor = dbRequestDoctor($con, $nom);

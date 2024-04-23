@@ -10,3 +10,11 @@
 .medecin{
     margin: 10px;
 }
+
+#recherche{
+    margin: 20px;
+}
+
+input{
+    border-radius: 5px;
+}
