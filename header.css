@@ -37,3 +37,7 @@
 #error{
     color: red;
 }
+
+#searchBar{
+    margin: 20px;
+}
