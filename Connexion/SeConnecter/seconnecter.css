@@ -5,12 +5,6 @@
     border-radius: 20px;
 }
 
-#inscription{
-    padding-top: 10px;
-    margin-left: 38%;
-    color: red;
-}
-
-#inscription a{
-    text-decoration: none;
+main #inscription{
+    margin-right: 38%;
 }
