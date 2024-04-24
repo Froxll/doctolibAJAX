@@ -83,12 +83,25 @@
           </div>
 
           <div id="accueil" class="invisible">
-            <h2>Contenu de la page Accueil...</h2>
 
+
+          <div id="recherche">
             <input placeholder="Click here, then press and release a key." size="40" onkeyup="handleKeyUp(event)"/>
+
+            <select name="specialite" id="specialite">
+              <option value="pas_de_preference">Pas de préférence</option>
+              <option value="generaliste">Généraliste</option>
+              <option value="podologue">Podologue</option>
+              <option value="psychologue">Psychologue</option>
+              <option value="dermatologue">Dermatologue</option>
+              
+            </select>
+
             <p id="log"></p>
 
-            <div id="medecins"></div>
+          </div>
+
+          <div id="medecins"></div>
 
           </div>
 
@@ -98,7 +111,7 @@
 
           <div id="connexion" class="invisible">
                 <form method="POST" align="center">
-                    <a href="../Connexion/SeConnecter/seconnecter.php">Se connecter</a>
+                    <a href="../../SeConnecter/seconnecter.php">Se connecter</a>
                     <a href="#" onclick="afficherDiv('inscription')">S'inscrire</a>
                     <a href="../Connexion/Deconnexion/deconnexion.php" id="deconnexion">Se déconnecter</a>
           </div>

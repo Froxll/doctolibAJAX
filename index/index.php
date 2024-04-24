@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link href="header.css" rel="stylesheet">
         <script src="../affichage.js"></script>
+        <script src="../Accueil/accueil.js"></script>
         <title> Accueil </title>
     </head>
 
@@ -26,11 +27,10 @@
                   </button>
 
                   <div class="ID">
-                  </div>
-
                   <?php
                     affichage_utilisateur_connecte();
                   ?> 
+                  </div>
                   
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
@@ -49,7 +49,6 @@
         <main>
 
           <div id="accueil" class="visible">
-
 
             <div id="recherche">
               <input placeholder="Click here, then press and release a key." size="40" onkeyup="handleKeyUp(event)"/>
@@ -77,9 +76,17 @@
 
           <div id="connexion" class="invisible">
                 <form method="POST" align="center">
-                    <a href="../Connexion/SeConnecter/seconnecter.php">Se connecter</a>
-                    <a href="#" onclick="afficherDiv('inscription')">S'inscrire</a>
-                    <a href="../Connexion/Deconnexion/deconnexion.php" id="deconnexion">Se déconnecter</a>
+                <?php
+                  // Vérifier si l'utilisateur est connecté
+                  if(isset($_SESSION['mail']) || isset($_SESSION['mail_p'])) {
+                      echo '<a href="#">Se connecter</a>
+                            <a href="#" onclick="#">S\'inscrire</a>';
+                  } else {
+                      echo '<a href="../Connexion/SeConnecter/seconnecter.php">Se connecter</a>
+                            <a href="#" onclick="afficherDiv(\'inscription\')">S\'inscrire</a>';
+                  }
+                  ?>
+                  <a href="../Connexion/Deconnexion/deconnexion.php" id="deconnexion">Se déconnecter</a>
           </div>
 
           <div id="inscription" class="invisible">
@@ -94,3 +101,4 @@
     </body>
 
 </html>
+<?php
