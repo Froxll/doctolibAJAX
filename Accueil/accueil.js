@@ -1,22 +1,22 @@
-const input = document.querySelector("input");
+
 const log = document.getElementById("log");
 
 
 function handleKeyUp(event) {
+  const input = document.querySelector("input");
   if (event.key === "Enter") {
-    var inputValue = input.value;
+      var inputValue = input.value;
 
-    var selectElement = document.getElementById("specialite");
-    var optionChoisie = selectElement.options[selectElement.selectedIndex].value;
+      var selectElement = document.getElementById("specialite");
+      var optionChoisie = selectElement.options[selectElement.selectedIndex].value;
 
-    if(optionChoisie == "pas_de_preference"){
-      //ENVOYER inputValue dans GET qui va me permettre de récuperer les docteurs s'appellant "inputValue"
-      ajaxRequest('GET','/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '',displayMedecin);
-    }
-    else{
-      ajaxRequest('GET','/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '&specialite=' + optionChoisie ,displayMedecin);
-    }
-  
+      if (optionChoisie == "pas_de_preference") {
+          // ENVOYER inputValue dans GET qui va me permettre de récupérer les docteurs s'appelant "inputValue"
+          ajaxRequest('GET', '/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '', displayMedecin);
+      } else {
+          ajaxRequest('GET', '/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '&specialite=' + optionChoisie, displayMedecin);
+      }
+
   }
 }
 

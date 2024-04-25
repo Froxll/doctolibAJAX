@@ -11,6 +11,7 @@
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link href="header.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
         <script src="../affichage.js"></script>
         <script src="../Accueil/accueil.js"></script>
         <title> Accueil </title>
