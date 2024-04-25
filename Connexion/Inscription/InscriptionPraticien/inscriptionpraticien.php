@@ -68,7 +68,13 @@
                 <input name='ville' type="text" class="form-control" id="inputEmail4"  placeholder="Ville de pratique">
               </div>
               <div class="col-12">
-                <input  name='spe' type="text" class="form-control" id="inputAddress" placeholder="Spécialitées">
+                <select name="spe" id="inputAddress">
+                  <option value="pas_de_preference">Pas de préférence</option>
+                  <option value="generaliste">Généraliste</option>
+                  <option value="podologue">Podologue</option>
+                  <option value="psychologue">Psychologue</option>
+                  <option value="dermatologue">Dermatologue</option>
+                </select>
               </div>
               <div class="col-md-6">
                 <input name='mail' type="email" class="form-control" id="inputEmail4"  placeholder="Adresse mail">
