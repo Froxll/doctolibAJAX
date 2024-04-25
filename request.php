@@ -1,5 +1,6 @@
 <?php
     include "database.php";
+    include "/var/www/html/AJAX/Doctolib-AJAX/doctolibAJAX/doctolibAJAX/RDV/functionRdv.php";
 
     ini_set('display_errors',1);
     error_reporting(E_ALL);
@@ -36,6 +37,13 @@
             //
         }
 
+    }
+    elseif($requestRessource === 'rdv'){
+        if($_SERVER['REQUEST_METHOD'] === 'GET'){
+            $rdv = dbRequestRDV($con);
+            $rdv = json_decode($rdv);
+            echo $rdv;
+        }
     }
 
 ?>
