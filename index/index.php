@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link href="header.css" rel="stylesheet">
         <script src="../RDV/rdv.js"></script>
+        <link href="index.css" rel="stylesheet">
         <script src="../affichage.js"></script>
         <script src="../Accueil/accueil.js"></script>
         <title> Accueil </title>
