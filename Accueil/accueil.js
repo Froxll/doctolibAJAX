@@ -20,8 +20,31 @@ function handleKeyUp(event) {
   }
 }
 
+function afficherDiv(divId) {
+  
+  if(divId == 'accueil'){
+    document.getElementById(divId).classList.remove('invisible');
+    document.getElementById("rdv").classList.add("invisible");
+    document.getElementById("connexion").classList.add("invisible");
+  }
+  else if(divId == 'rdv'){
+    document.getElementById(divId).classList.remove('invisible');
+    document.getElementById("accueil").classList.add("invisible");
+    document.getElementById("connexion").classList.add("invisible");
+  }
+  else if(divId == 'connexion'){
+    document.getElementById(divId).classList.remove('invisible');
+    document.getElementById("accueil").classList.add("invisible");
+    document.getElementById("rdv").classList.add("invisible");
+  }
+  
+  
+}
+
 function displayMedecin(data){
   var medecinsHTML = ''; 
+
+  
 
     for (var i = 0; i < data.length; i++) {
         var medecin = data[i]; 
@@ -47,6 +70,8 @@ function displayMedecin(data){
 
     document.getElementById('medecins').innerHTML = medecinsHTML;
 }
+
+
 
 
 

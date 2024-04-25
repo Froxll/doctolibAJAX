@@ -1,6 +1,5 @@
 <?php
     include "database.php";
-    include "/var/www/html/AJAX/Doctolib-AJAX/doctolibAJAX/doctolibAJAX/RDV/functionRdv.php";
 
     ini_set('display_errors',1);
     error_reporting(E_ALL);
@@ -10,7 +9,6 @@
     $request = substr($_SERVER['PATH_INFO'], 1); 
     $request = explode('/', $request); 
     $requestRessource = array_shift($request);
-    echo $requestRessource;
 
     if($requestRessource === 'medecin'){
 
@@ -37,12 +35,7 @@
         elseif($_SERVER['REQUEST_METHOD'] === 'DELETE'){
             //
         }
+
     }
-    elseif($requestRessource === 'rdv'){
-        if($_SERVER['REQUEST_METHOD'] === 'GET'){
-            $rdv = dbRequestRDV($con);
-            $rdv = json_decode($rdv);
-            echo $rdv;
-        }
-    }
+
 ?>
