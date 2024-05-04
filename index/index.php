@@ -1,6 +1,44 @@
 <?php
   session_start();
   include '../functions.php';
+
+  /*$conn = dbConnect();
+  $id_rdv = 11;
+  $date = '26/05/2024';
+  $mail_practicien = 'nathan@gadbin.com';
+  // 9h/12h puis 14h/18h
+  $plagesHoraires = array(
+    array("debut" => 10, "fin" => 11),
+    array("debut" => 14, "fin" => 18)
+  );
+
+  foreach ($plagesHoraires as $plage) {
+    $debut = $plage["debut"];
+    $fin = $plage["fin"];
+
+    for ($heure = $debut; $heure < $fin; $heure++) {
+        for ($minute = 0; $minute < 60; $minute += 30) {
+            
+            $heureFormattee = str_pad($heure, 2, "0", STR_PAD_LEFT);
+            $minuteFormattee = str_pad($minute, 2, "0", STR_PAD_LEFT);
+
+            
+            $horaire = "$heureFormattee:$minuteFormattee";
+
+            $res = $conn->query("INSERT INTO RDV values ('$id_rdv','$date','$horaire','$mail_practicien','nathan@gadbin.com')");
+            $id_rdv+=1;
+
+            
+          }
+        }
+      }
+*/
+
+//$res = $conn->query("DELETE FROM RDV WHERE date = '09/01/2024'");
+
+//$res = $conn->query("INSERT INTO RDV values ('4255','02/01/2024','16:30','natalie@gadbin.com','test@gmail.com')")
+
+
 ?>
 
 <!DOCTYPE html>
@@ -56,10 +94,10 @@
 
               <select name="specialite" id="specialite">
                 <option value="pas_de_preference">Pas de préférence</option>
-                <option value="generaliste">Généraliste</option>
-                <option value="podologue">Podologue</option>
-                <option value="psychologue">Psychologue</option>
-                <option value="dermatologue">Dermatologue</option>
+                <option value="Generaliste">Généraliste</option>
+                <option value="Podologue">Podologue</option>
+                <option value="Psychologue">Psychologue</option>
+                <option value="Dermatologue">Dermatologue</option>
                 
               </select>
 
