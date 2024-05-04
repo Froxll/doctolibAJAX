@@ -4,7 +4,7 @@
 
         if(isset($_POST['envoie'])){
             //vérif si tout les champs sont remplis
-            if(!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['numero']) AND !empty($_POST['ville']) AND !empty($_POST['spe']) AND !empty($_POST['mail']) AND !empty($_POST['mdp'])){
+            if(!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['numero']) AND !empty($_POST['ville']) AND !empty($_POST['spe']) AND $_POST['spe'] != 'pas_de_preference' AND !empty($_POST['mail']) AND !empty($_POST['mdp'])){
                 //Récupération des informations rentrées
                 $prenom = $_POST['prenom'];
                 $nom = $_POST['nom'];

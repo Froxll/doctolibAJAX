@@ -49,12 +49,9 @@
         <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link href="header.css" rel="stylesheet">
-
-        <script src="../RDV/rdv.js"></script>
-        <link href="index.css" rel="stylesheet">
-
-        <script src="../affichage.js"></script>
-        <script src="../Accueil/accueil.js"></script>
+        <script src="../RDV/rdv.js" defer></script>
+        <script src="../Accueil/accueil.js" defer></script>
+        <script src="../affichage.js" defer></script>
         <title> Accueil </title>
     </head>
 
@@ -77,7 +74,7 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" onclick="afficherDiv('rdv')">Mes RDV</a>
+                        <a class="nav-link active" aria-current="page" href="#" onclick="afficherDiv('rdv'); getRDV()">Mes RDV</a>
                       </li>
                       <li class="nav-item">
                         <a id="boutonConnexion" class="nav-link" href="#" onclick="afficherDiv('connexion')">Connexion</a>
@@ -122,10 +119,10 @@
                   // Vérifier si l'utilisateur est connecté
                   if(isset($_SESSION['mail']) || isset($_SESSION['mail_p'])) {
                       echo '<a href="#">Se connecter</a>
-                            <a href="#" onclick="#">S\'inscrire</a>';
+                            <a href="#">S\'inscrire</a>';
                   } else {
-                      echo '<a href="../Connexion/SeConnecter/seconnecter.php">Se connecter</a>
-                            <a href="#" onclick="afficherDiv(\'inscription\')">S\'inscrire</a>';
+                       echo "<a href=\"../Connexion/SeConnecter/seconnecter.php\">Se connecter</a>
+                             <a href=\"#\" onclick=\"afficherDiv('inscription')\">S'inscrire</a>";
                   }
                   ?>
                   <a href="../Connexion/Deconnexion/deconnexion.php" id="deconnexion">Se déconnecter</a>
@@ -138,9 +135,10 @@
                 </form>
           </div>
 
+          <div id="formulaire" class="invisible"></div>
+
         </main>
 
     </body>
 
 </html>
-<?php

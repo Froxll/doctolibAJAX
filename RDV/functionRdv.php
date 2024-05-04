@@ -2,6 +2,34 @@
 
 date_default_timezone_set('Europe/London');
 
+function dbRequestRDV($db){
+  if(isset($_SESSION['mail'])){
+    $userMail = $_SESSION['mail'];
+    try {
+      $request = "SELECT horaire,date,mail_1,id FROM RDV WHERE mail_2 LIKE '$userMail'";
+      $statement = $db->prepare($request);
+      $statement->execute();
+      $result = $statement ->fetchALL(PDO::FETCH_ASSOC);
+    } catch(PDOException $exception){
+      error_log('Request error: ' . $exception->getMessage());
+      return false;
+    } 
+  }
+  else{
+    $userMail = $_SESSION['mail_p'];
+    try {
+      $request = "SELECT horaire,date,mail_2,id FROM RDV WHERE mail_1 LIKE '$userMail'";
+      $statement = $db->prepare($request);
+      $statement->execute();
+      $result = $statement ->fetchALL(PDO::FETCH_ASSOC);
+    } catch(PDOException $exception){
+      error_log('Request error: ' . $exception->getMessage());
+      return false;
+    } 
+  }
+  return $result;
+}
+
     function annulerdv(){
         if(isset($_POST["annulerRDV"])){
             $selectedID = $_POST["submitID"];
