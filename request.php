@@ -42,14 +42,6 @@
         }
 
     }
-    elseif($requestRessource === 'rdv'){
-        if($_SERVER['REQUEST_METHOD'] === 'GET'){
-            $rdv = dbRequestRDV($con);
-            $rdv = json_decode($rdv);
-            echo $rdv;
-        }
-    }
-
     if($requestRessource === 'rdv'){
         if($_SERVER['REQUEST_METHOD'] === 'GET'){
             if(isset($_GET['email']) ){
@@ -69,5 +61,4 @@
             exit;
         }
     }
-
 ?>
