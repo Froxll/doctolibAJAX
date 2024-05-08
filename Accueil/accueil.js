@@ -12,10 +12,10 @@ function handleKeyUp(event) {
 
       if (optionChoisie == "pas_de_preference") {
         // ENVOYER inputValue dans GET qui va me permettre de récupérer les docteurs s'appelant "inputValue"
-        ajaxRequest('GET', '/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '', displayMedecin);
+        ajaxRequest('GET', '/var/www/html/AJAX/Doctolib-AJAX/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '', displayMedecin);
       } 
       else {
-        ajaxRequest('GET', '/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '&specialite=' + optionChoisie, displayMedecin);
+        ajaxRequest('GET', '/var/www/html/AJAX/Doctolib-AJAX/doctolibAJAX/doctolibAJAX/request.php/medecin/?nom=' + inputValue + '&specialite=' + optionChoisie, displayMedecin);
       }
 
   }
