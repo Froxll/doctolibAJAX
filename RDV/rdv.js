@@ -1,5 +1,5 @@
 function getRDV(){
-  ajaxRequest('GET','/Doctolib-AJAX/doctolibAJAX/doctolibAJAX/request.php/rdv',displayRDV)
+  ajaxRequest('GET','/var/www/html/AJAX/Doctolib-AJAX/doctolibAJAX/doctolibAJAX/request.php/rdv',displayRDV)
 }
 
 function displayRDV(data){
